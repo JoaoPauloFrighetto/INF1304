@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>br.com.meslin</groupId>
@@ -13,7 +14,7 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
-    
+
     <build>
         <finalName>consumer-service</finalName>
         <sourceDirectory>src</sourceDirectory>
@@ -23,9 +24,9 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
-                <source>11</source>
-                <target>11</target>
-                <release>11</release>
+                    <source>11</source>
+                    <target>11</target>
+                    <release>11</release>
                 </configuration>
             </plugin>
             <plugin>
@@ -33,10 +34,10 @@
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>3.2.0</version>
                 <executions>
-                <execution>
-                    <id>default-jar</id>
-                    <phase>none</phase> <!-- Isso desativa a criação do JAR padrão -->
-                </execution>
+                    <execution>
+                        <id>default-jar</id>
+                        <phase>none</phase> <!-- Isso desativa a criação do JAR padrão -->
+                    </execution>
                 </executions>
             </plugin>
             <plugin>
@@ -46,21 +47,20 @@
                 <configuration>
                     <archive>
                         <manifest>
-                        <mainClass>br.com.meslin.ChatConsumer</mainClass> <!-- Substitua com o nome da sua classe principal -->
+                            <mainClass>br.com.meslin.ChatConsumer</mainClass> <!-- Substitua com o nome da sua classe principal -->
                         </manifest>
                     </archive>
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
-                    </configuration>
+                </configuration>
                 <executions>
-                <execution>
-                    <id>make-assembly</id>
-                    <phase>package</phase>
-                    <goals>
-                    <goal>single</goal>
-                    </goals>
-                </execution>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            </goals>
+                    </execution>
                 </executions>
             </plugin>
         </plugins>
